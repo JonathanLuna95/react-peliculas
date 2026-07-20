@@ -1,16 +1,55 @@
-# React + Vite
+# Taller 2: Ejercicio de Listas en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Estudiante
 
-Currently, two official plugins are available:
+Jonathan Luna
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Opción seleccionada
 
-## React Compiler
+**Opción 2:** Ejercicio enviado para revisión en Krake.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Descripción del proyecto
 
-## Expanding the ESLint configuration
+Este proyecto consiste en una aplicación desarrollada con React que muestra una lista de películas utilizando componentes reutilizables y renderización dinámica.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidad principal
+
+- Mostrar una lista de películas.
+- Renderizar cada película mediante un componente.
+- Organizar la información de forma clara y ordenada.
+
+## ¿Cómo se construye la lista?
+
+La aplicación utiliza un arreglo de objetos con la información de cada película. Luego, mediante el método `map()`, React recorre ese arreglo y muestra cada elemento de la lista en pantalla.
+
+## Correcciones realizadas
+
+Se revisó el proyecto y se realizaron los ajustes necesarios para garantizar su correcto funcionamiento antes de la entrega.
+
+## Tecnologías utilizadas
+
+- React
+- Vite
+- JavaScript
+- CSS
+
+## Instalación y ejecución
+
+1. Abrir una terminal en la carpeta del proyecto.
+2. Instalar las dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecutar la aplicación:
+
+```bash
+npm run dev
+```
+
+4. Abrir el navegador en la dirección que muestra Vite (normalmente http://localhost:5173).
+
+## Observaciones
+
+Proyecto desarrollado como parte del Taller 2 del Primer Parcial de React 

@@ -7,18 +7,10 @@ function Pelicula({titulo}){
 
   return(
     <div
-      style={{
-        border: esFavorita ? '2px solid black' : '1px solid gray',
-        padding: '10px',
-        margin: '5px',
-        backgroundColor: esFavorita ? '#0073ff' : 'white',
-        cursor: 'pointer',
-        color: esFavorita ? 'white' : '#333'
-      }}
-
+      className={`movie-card ${esFavorita ? 'favorite' : ''}`}
       onClick={()=> setEsFavorita(!esFavorita)}
     >
-      <p>
+      <p className="movie-title">
         {titulo} {esFavorita ? "⭐" : ""}
       </p>
     </div>
@@ -49,25 +41,41 @@ function App() {
   }
 
   return (
-  <div>
-    <h1>Mis Películas Favoritas</h1>
+  <div className="app-container">
+    <header className="app-header">
+      <h1 className="app-title">Mis Películas Favoritas</h1>
+      <p className="app-subtitle">Crea y organiza tu lista personal</p>
+    </header>
 
-    <div>
-      <input
-        type='text'
-        value={nuevaPelicula}
-        onChange={(e)=> setNuevaPelicula(e.target.value)}
-        placeholder='Nueva película...'
-      />
+    <section className="form-container">
+      <div className="input-group">
+        <input
+          type='text'
+          className="movie-input"
+          value={nuevaPelicula}
+          onChange={(e)=> setNuevaPelicula(e.target.value)}
+          placeholder='Nueva película...'
+        />
 
-      <button onClick={agregarPelicula}>
-        Agregar
-      </button>
-    </div>
+        <button className="add-button" onClick={agregarPelicula}>
+          Agregar
+        </button>
+      </div>
+    </section>
 
-    {peliculas.map((pelicula, indice)=>{
-      return <Pelicula key={indice} titulo={pelicula} />
-    })}
+    <main className="movies-section">
+      {peliculas.length === 0 ? (
+        <div className="empty-state">
+          <p>No hay películas en la lista.</p>
+        </div>
+      ) : (
+        <div className="movie-grid">
+          {peliculas.map((pelicula, indice)=>{
+            return <Pelicula key={indice} titulo={pelicula} />
+          })}
+        </div>
+      )}
+    </main>
 
   </div>
 );
